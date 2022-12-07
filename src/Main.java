@@ -1,9 +1,3 @@
-import java.io.IOException;
-
-import java.net.URL;
-import java.util.Scanner;
-
-import javax.swing.JFrame;
 
 public class Main {
    public static void main(String args[]) {
@@ -11,7 +5,7 @@ public class Main {
    }
    
    public static void Init() {
-	   GUIManager guiManager = new GUIManager();	
+	   GUIManager guiManager = new GUIManager(800,800);	
    }
    
 }

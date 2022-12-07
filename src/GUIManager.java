@@ -2,35 +2,23 @@ import java.awt.Color;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 public class GUIManager {
-	GUIManager(){
+	GUIManager(int x, int y){
 		
-		JLabel label = CreateLabel("DENEMEEEEEEEE", null, JLabel.TOP);				
+		JLabel label = JTypeBuilder.CreateLabel("DENEME", null, JLabel.TOP);	
 		
-		JFrame frame =  CreateFrame();
-		frame.add(label);
-	}
+		JPanel panelTop = JTypeBuilder.CreatePanel(Color.red, x,y / 4);
+		JPanel panelTopInner = JTypeBuilder.CreatePanel(x,y / 10, 20);
 
-
-	public JFrame CreateFrame() {
-		JFrame frame = new JFrame(); // Create a frame
-		frame.setTitle("Title"); // Frame title
-		frame. setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
-		frame.setResizable(false); //prevent frame from being resized
-		frame.setSize(800,800); //sets the x-dimension, and y-dimension of frame
-		frame.setVisible(true); //make frame visible
-
-		frame. getContentPane().setBackground(new Color(100,100,100)); //change color of background
-		return frame;
-	}
-	
-	
-	public JLabel CreateLabel(String text, Integer horizontalPosition, Integer verticalPosition) {
-		JLabel label = new JLabel();
-		label.setText(text);
-		if(horizontalPosition != null)label.setHorizontalAlignment(horizontalPosition);
-		if(verticalPosition != null)label.setVerticalAlignment(verticalPosition);
-		return label;
+		JFrame frame =  JTypeBuilder.CreateFrame(x,y);
+		//frame.add(label);
+		panelTop.add(label);
+		panelTop.add(panelTopInner);
+		
+		frame.add(panelTop);
+		
+		System.out.println("Frame Created");
 	}
 }

@@ -71,13 +71,13 @@ public class JTypeBuilder {
 		jPanel.setBackground(backgroundColor);
 		jPanel.setPreferredSize(new Dimension(width, 0));
 		jPanel.setLayout(new GridLayout(10, 1, 10, 0));
-		jPanel.add(new JButtonBuilder("Kredi Hesaplama Aracı"));
-		jPanel.add(new JButtonBuilder("Repo Hesaplama"));
-		jPanel.add(new JButtonBuilder("Mevduat Faizi Hesaplama"));
-		jPanel.add(new JButtonBuilder("E-mevduat Faizi Hesaplama"));
-		jPanel.add(new JButtonBuilder("Fon Hesaplama"));
-		jPanel.add(new JButtonBuilder("Döviz Hesaplama"));
-		jPanel.add(new JButtonBuilder("Borç Hesaplama"));
+		jPanel.add(new JButtonCalculation("Kredi Hesaplama Aracı", new KrediHesaplamaPanel()));
+		jPanel.add(new JButtonCalculation("Repo Hesaplama", new KrediHesaplamaPanel()));
+		jPanel.add(new JButtonCalculation("Mevduat Faizi Hesaplama", new KrediHesaplamaPanel()));
+		jPanel.add(new JButtonCalculation("E-mevduat Faizi Hesaplama", new KrediHesaplamaPanel()));
+		jPanel.add(new JButtonCalculation("Fon Hesaplama", new KrediHesaplamaPanel()));
+		jPanel.add(new JButtonCalculation("Döviz Hesaplama", new KrediHesaplamaPanel()));
+		jPanel.add(new JButtonCalculation("Borç Hesaplama", new KrediHesaplamaPanel()));
 		
 		return jPanel;
 	}

@@ -10,7 +10,7 @@ public class GUIManager {
 		JLabel label = JTypeBuilder.CreateLabel("DENEME", null, JLabel.TOP);	
 		
 		JPanel panelTop = JTypeBuilder.CreatePanel(Color.red, x,y / 4);
-		JPanel panelTopInner = JTypeBuilder.CreatePanel(x,y / 10, 20);
+		JPanel panelTopInner = JTypeBuilder.CreateBankPanel(x,y / 10, 20);
 
 		JFrame frame =  JTypeBuilder.CreateFrame(x,y);
 		//frame.add(label);

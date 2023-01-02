@@ -11,7 +11,7 @@ public class JTypeBuilder {
 	public static JFrame CreateFrame(int x, int y) {
 		JFrame frame = new JFrame(); // Create a frame
 		frame.setTitle("Money Is Money"); // Frame title
-		frame. setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit out of application
 		frame.setResizable(false); //prevent frame from being resized
 		frame.setSize(x,y); //sets the x-dimension, and y-dimension of frame
 		frame.setVisible(true); //make frame visible
@@ -48,7 +48,7 @@ public class JTypeBuilder {
 	/**
 	* Create panel with new dimension and buttons
 	* */
-	public static JPanel CreatePanel(int width, int height, int padding) {
+	public static JPanel CreateBankPanel(int width, int height, int padding) {
 		JPanel jPanel = new JPanel();
 		jPanel.setPreferredSize(new Dimension(width,height));
 		

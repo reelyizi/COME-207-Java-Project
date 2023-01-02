@@ -37,10 +37,10 @@ public class JTypeBuilder {
 	/**
 	* Create panel by given color and size
 	* */
-	public static JPanel CreatePanel(Color backgroundColor, int x, int y) {
+	public static JPanel CreatePanel(Color backgroundColor,int x, int y, int width, int height) {
 		JPanel jPanel = new JPanel();
 		jPanel.setBackground(backgroundColor);
-		jPanel.setBounds(0,0,x, y);
+		jPanel.setBounds(x,y,width,height);
 		
 		return jPanel;
 	}
@@ -58,6 +58,26 @@ public class JTypeBuilder {
 		jPanel.add(new JButtonBuilder("Yapı Kredi"));
 		jPanel.add(new JButtonBuilder("Ziraat"));
 		jPanel.add(new JButtonBuilder("HSBC"));
+		
+		return jPanel;
+	}
+	
+	/**
+	* Create panel with new dimension and buttons
+	* */
+	public static JPanel CreateCalculationButtonsPanel(Color backgroundColor,int width) {
+		JPanel jPanel = new JPanel();
+		
+		jPanel.setBackground(backgroundColor);
+		jPanel.setPreferredSize(new Dimension(width, 0));
+		jPanel.setLayout(new GridLayout(10, 1, 10, 0));
+		jPanel.add(new JButtonBuilder("Kredi Hesaplama Aracı"));
+		jPanel.add(new JButtonBuilder("Repo Hesaplama"));
+		jPanel.add(new JButtonBuilder("Mevduat Faizi Hesaplama"));
+		jPanel.add(new JButtonBuilder("E-mevduat Faizi Hesaplama"));
+		jPanel.add(new JButtonBuilder("Fon Hesaplama"));
+		jPanel.add(new JButtonBuilder("Döviz Hesaplama"));
+		jPanel.add(new JButtonBuilder("Borç Hesaplama"));
 		
 		return jPanel;
 	}
